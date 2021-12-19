@@ -1,0 +1,2 @@
+sqlalchemy # for using orm in sql
+flask # for rest service
