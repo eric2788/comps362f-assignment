@@ -19,6 +19,7 @@ if __name__ == '__main__':
     # custom port available from args
     port = argv[1] if len(argv) > 1 else None
 
+    # ensure safe parsing
     if port and port.isdigit():
         mutable_port = int(port) 
     

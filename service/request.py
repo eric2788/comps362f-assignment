@@ -18,6 +18,7 @@ def request(path: str, method='GET', data=None):
         result = json.loads(resp.read().decode("utf-8"))
     return result
 
+# CRUD functions
 
 def post(path, data={}):
     return request(path, 'POST', data)
@@ -25,7 +26,6 @@ def post(path, data={}):
 def put(path, data ={}):
     return request(path, 'PUT', data)
 
-# get request no need payload
 def get(path):
     return request(path)
 

@@ -87,6 +87,15 @@ class TestWebService(unittest.TestCase):
         resp = put('/market/replenish/4', {'amount': 3})['data']
         self.assertDictEqual(expected_resp, resp)
 
+        # query a product should show the new quantity
+        expected_resp = {
+            'quantity': 5,
+            'id': 4,
+            'description': 'milk',
+            'price': 25
+        }
+        self.assertDictEqual(get('/market/query/4')['data'], expected_resp)
+
     # Test5: When the product ID does not exist, the server returns the 404 status code.
     def test_product_id_non_exist(self):
         with self.assertRaises(HTTPError) as e:

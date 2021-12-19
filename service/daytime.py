@@ -16,9 +16,9 @@ def fetch_excution_id():
     # production mode
     data = fetch_datetime()
     # debug mode
-    #data = b"test_debug_time"
+    #d ata = b"test_debug_time"
     print('The DateTime when server started is: ', data.decode('utf-8'))
-    return hashlib.sha256(data).hexdigest()
+    return hashlib.sha256(data).hexdigest() # hash the datetime string
 
 EXE_ID = fetch_excution_id()
 

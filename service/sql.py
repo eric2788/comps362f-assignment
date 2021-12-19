@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 from contextlib import  contextmanager
 from threading import Lock
 
-
+# it will auto create database if not exists
 engine = create_engine('sqlite:///market.db')
 
 # a base class to give table model to extends
