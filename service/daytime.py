@@ -27,8 +27,9 @@ def fetch_datetime():
             else:
                 print(f'fetch failed, wait 3 seconds and using next host...')
                 time.sleep(3) # request slowly
-        print(f'All hosts failed. wait 10 seconds and rerun fetch...')
-        time.sleep(10) # request slowly
+    print(f'All hosts failed. wait 10 seconds and rerun fetch...')
+    time.sleep(10) # request slowly
+    return fetch_datetime() # recursion function
 
 def fetch_excution_id():
     # production mode
