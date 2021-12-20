@@ -71,7 +71,7 @@ if __name__ == '__main__':
     amount = argv[2] if len(argv) > 2 else None
 
     # safe parsing amount
-    if amount.isdigit():
+    if amount and amount.isdigit():
         amount = int(amount)
     else:
         amount = None
